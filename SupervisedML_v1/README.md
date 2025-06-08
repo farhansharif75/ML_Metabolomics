@@ -1,4 +1,4 @@
-Supervised ML implementation for 6 models of interest:
+Supervised ML implementation on preprocessed data for 6 models of interest:
 - Linear Discriminant Analysis (LDA)
 - (Multi-)Logistic Regression (LogReg)
 - Random Forest (RF)
