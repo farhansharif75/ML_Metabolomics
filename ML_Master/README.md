@@ -3,3 +3,5 @@ Combined all version 4 models into one notebook for ease of multiple model train
 - Config 2 -> 0: Normal, 1: CIN1 + CIN2 + CGIN + HPV
 - Config 3 -> Normal + HPV, 1: CIN1, 2: CIN" + CGIN
 - Config 4 -> One vs Rest (OVR) for all classes
+
+Here, model training, cross-validation results, and optimisation for all different configs are included.
