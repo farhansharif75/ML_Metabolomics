@@ -5,7 +5,9 @@ Combined all version 4 models into a single notebook for easier multi-model trai
 - Config 4 → One-vs-Rest (OvR) for all classes
 
 This is in addition to the original one-shot multiclass approach, where models predicted which of the five classes (Normal, CIN1, CIN2, CGIN, HPV INFECTION) a given pixel belonged to.
+
 For SVM (in all multiclass cases), and Logistic Regression (when using multi_class='ovr' or solvers like liblinear), this corresponds to a one-vs-rest (OvR) approach by default (per the scikit-learn documentation).
+
 For the other four models (XGBoost, Multilayer Perceptron/Simple Neural Network, Random Forest, and Linear Discriminant Analysis), multiclass classification is handled natively. To explicitly apply OvR classification with these models, we wrap the base estimator using OneVsRestClassifier in the pipeline. The master file for Config 4 includes an additional option (not included in the other files) to apply OneVsRestClassifier, enabling OvR classification across all implemented models.
 
 In this subfolder, model training, cross-validation results, and optimisation for all configurations are included.
