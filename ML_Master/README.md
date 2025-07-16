@@ -12,6 +12,6 @@ For the other four models (XGBoost, Multilayer Perceptron/Simple Neural Network,
 
 In this subfolder, model training, cross-validation results, and optimisation for all configurations are included.
 
-- Folders starting with TunedModels contain the final models (in .pkl format) with the best parameters obtained from cross-validation and hyperparameter tuning. The suffixes of these folders denote the corresponding label configuration.
+- Folders starting with 'TunedModels' contain the final models (in .pkl format) with the best parameters obtained from cross-validation and hyperparameter tuning. The suffixes of these folders denote the corresponding label configuration.
 
-- Similarly, ResultsCV folders contain results from the training, cross-validation, and tuning procedures (in .pkl format), including evaluation metrics and normalised confusion matrices (as .png files), with suffixes indicating the label configuration.
+- Similarly, 'ResultsCV' folders contain results from the training, cross-validation, and tuning procedures (in .pkl format), including evaluation metrics and normalised confusion matrices (as .png files), with suffixes indicating the label configuration.
