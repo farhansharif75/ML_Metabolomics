@@ -13,7 +13,7 @@ In contrast, the other four models (XGBoost, Multilayer Perceptron/Simple Neural
 
 To enforce a consistent OvR approach across all models, we wrap the base estimators with OneVsRestClassifier in the pipeline, ensuring that feature selection and dimensionality reduction steps are applied in the appropriate location. 
 
-or feature selection, our pipelines incorporate SelecKBest() from sklearn, using the ANOVA F-value as the scoring function (f_classif) by default. Only this scoring function was used to produce our results, but other suitable scoring functions for classification tasks are: chi2, mutual_info_classif, though there are some caveats in their usage.
+or feature selection, our pipelines incorporate SelecKBest() from sklearn, using the ANOVA F-value as the scoring function (f_classif) by default. Only this scoring function was used to produce our results, but other suitable scoring functions for classification tasks are: chi2 and mutual_info_classif, though there are some caveats in their usage.
 
 In this subfolder, model training, cross-validation results, and optimisation for all configurations are included.
 
