@@ -3,4 +3,4 @@ This folder contains the CV results for label configuration 0. This corresponds 
 - 'CIN1' : 1
 - 'CIN2' : 2
 - 'CGIN' : 3
-- 'HPV INFECTION' : 4
+- 'HPV' : 4
