@@ -11,7 +11,7 @@ According to the scikit-learn documentation, SVMs (in all multiclass scenarios) 
 
 In contrast, the other four models (XGBoost, Multilayer Perceptron/Simple Neural Network, Random Forest, and Linear Discriminant Analysis) handle multiclass classification natively. 
 
-To enforce a consistent OvR approach across all models, we wrap the base estimators with OneVsRestClassifier in the pipeline, ensuring that the feature selection and dimensionality reduction steps are applied in the appropriate positions in the pipelines.
+To enforce a consistent OvR approach across all models, we wrap the base estimators with OneVsRestClassifier in the pipeline, ensuring that the feature selection and dimensionality reduction steps are applied in the appropriate positions in the pipeline. We have ensured to distinguish this case against the standard multiclass (non-OvR) approach.
 
 For feature selection, our pipelines incorporate SelecKBest() from sklearn, using the ANOVA F-value as the scoring function (f_classif) by default. Only this scoring function was used to produce our results, but other suitable scoring functions for classification tasks are (from scikit-learn documentation): chi2 and mutual_info_classif, though there are some caveats in their usage.
 
