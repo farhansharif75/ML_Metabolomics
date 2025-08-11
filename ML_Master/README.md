@@ -7,9 +7,7 @@ Combined all version 4 models into a single notebook for easier multi-model trai
 - Config 4 → One-vs-Rest (OvR) version of Config 0
 - Config 5 → One-vs-Rest (OvR) version of Config 3
 
-According to the scikit-learn documentation, SVMs (in all multiclass scenarios) and Logistic Regression (when multi_class='ovr' or using solvers such as 'liblinear') use a one-vs-rest (OvR) strategy by default. 
-
-In contrast, the other four models (XGBoost, Multilayer Perceptron/Simple Neural Network, Random Forest, and Linear Discriminant Analysis) handle multiclass classification natively. 
+According to the scikit-learn documentation, SVMs (in all multiclass scenarios) and Logistic Regression (when multi_class='ovr' or using solvers such as 'liblinear') use a one-vs-rest (OvR) strategy by default. In contrast, the other four models (XGBoost, Multilayer Perceptron/Simple Neural Network, Random Forest, and Linear Discriminant Analysis) handle multiclass classification natively. 
 
 To enforce a consistent OvR approach across all models, we wrap the base estimators with OneVsRestClassifier in the pipeline, ensuring that the feature selection and dimensionality reduction steps are applied in the appropriate positions in the pipeline. We have ensured to distinguish this case against the standard multiclass (non-OvR) approach.
 
