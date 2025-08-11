@@ -7,7 +7,13 @@ Combined all version 4 models into a single notebook for easier multi-model trai
 - Config 4 → One-vs-Rest (OvR) version of Config 0
 - Config 5 → One-vs-Rest (OvR) version of Config 3
 
-According to the scikit-learn documentation, SVMs (in all multiclass scenarios) and Logistic Regression (when multi_class='ovr' or using solvers such as 'liblinear') use a one-vs-rest (OvR) strategy by default. In contrast, the other four models (XGBoost, Multilayer Perceptron/Simple Neural Network, Random Forest, and Linear Discriminant Analysis) handle multiclass classification natively. To enforce a consistent OvR approach across all models, we wrap the base estimators with OneVsRestClassifier in the pipeline, ensuring that feature selection and dimensionality reduction steps are applied in the appropriate location. For feature selection, our pipelines incorporate SelecKBest() from sklearn, using the ANOVA F-value as the scoring function (f_classif) by default. Only this scoring function was used to produce our results, but other suitable scoring functions for classification tasks are: chi2, mutual_info_classif, though there are some caveats in their usage.
+According to the scikit-learn documentation, SVMs (in all multiclass scenarios) and Logistic Regression (when multi_class='ovr' or using solvers such as 'liblinear') use a one-vs-rest (OvR) strategy by default. 
+
+In contrast, the other four models (XGBoost, Multilayer Perceptron/Simple Neural Network, Random Forest, and Linear Discriminant Analysis) handle multiclass classification natively. 
+
+To enforce a consistent OvR approach across all models, we wrap the base estimators with OneVsRestClassifier in the pipeline, ensuring that feature selection and dimensionality reduction steps are applied in the appropriate location. 
+
+or feature selection, our pipelines incorporate SelecKBest() from sklearn, using the ANOVA F-value as the scoring function (f_classif) by default. Only this scoring function was used to produce our results, but other suitable scoring functions for classification tasks are: chi2, mutual_info_classif, though there are some caveats in their usage.
 
 In this subfolder, model training, cross-validation results, and optimisation for all configurations are included.
 
