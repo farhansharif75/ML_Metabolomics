@@ -1,0 +1,7 @@
+This folder contains the CV results for label configuration 5. This corresponds to the label assignment:
+- 'Normal, HPV INFECTION' : 0
+- 'CIN1' : 1
+- 'CIN2, CGIN' : 2
+
+
+This is the same as label configuration 3, however, the pipelines are constructed to perform One-vs-Rest (OvR) classification instead of straight multiclass. 
