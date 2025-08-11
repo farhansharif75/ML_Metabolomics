@@ -13,4 +13,4 @@ In this subfolder, model training, cross-validation results, and optimisation fo
 
 - Folders starting with 'TunedModels' contain the final models (in .pkl format) with the best parameters obtained from cross-validation and hyperparameter tuning. The suffixes of these folders denote the corresponding label configuration.
 
-- Similarly, 'ResultsCV' folders contain results from the training, cross-validation, and tuning procedures (in .pkl format), including evaluation metrics and normalised confusion matrices (as .png files), with suffixes indicating the label configuration. The tuned models for RF for configs 3 and 5 are currently larger than 25MB, and will be uploaded shortly.
+- Similarly, 'ResultsCV' folders contain results from the training, cross-validation, and tuning procedures (in .pkl format), including evaluation metrics and normalised confusion matrices (as .png files), with suffixes indicating the label configuration. The tuned models for RF for configs 3 and 5 are currently larger than 25MB, and compressed versions of these have been uploaded.
